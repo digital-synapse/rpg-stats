@@ -10,7 +10,7 @@ namespace RpgStatSystem
         public Random Random { get; private set; }
         public IBattleLog BattleLog { get; private set; }
 
-        public World(int worldWidth, int worldHeight, IBattleLog battleLog)
+        public World(int worldWidth=0, int worldHeight=0, IBattleLog battleLog=null)
         {
             if (Instance != null) throw new InvalidOperationException("World class is a singleton and must not be constructed more than once!");
             Instance = this;
